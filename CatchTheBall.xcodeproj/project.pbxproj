@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4ECA27CE24BBC5EB00E78C5F /* CatchTheBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchTheBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ECA27CE24BBC5EB00E78C5F /* Catch The Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catch The Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECA27D124BBC5EB00E78C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECA27D324BBC5EB00E78C5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4ECA27D524BBC5EB00E78C5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		4ECA27CF24BBC5EB00E78C5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4ECA27CE24BBC5EB00E78C5F /* CatchTheBall.app */,
+				4ECA27CE24BBC5EB00E78C5F /* Catch The Ball.app */,
 				4ECA27E424BBC5EC00E78C5F /* CatchTheBallTests.xctest */,
 				4ECA27EF24BBC5EC00E78C5F /* CatchTheBallUITests.xctest */,
 			);
@@ -145,7 +145,7 @@
 			);
 			name = CatchTheBall;
 			productName = CatchTheBall;
-			productReference = 4ECA27CE24BBC5EB00E78C5F /* CatchTheBall.app */;
+			productReference = 4ECA27CE24BBC5EB00E78C5F /* Catch The Ball.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4ECA27E324BBC5EC00E78C5F /* CatchTheBallTests */ = {
@@ -437,12 +437,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8ZKPMAVGG;
 				INFOPLIST_FILE = CatchTheBall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhas.CatchTheBall;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Catch The Ball";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,12 +456,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8ZKPMAVGG;
 				INFOPLIST_FILE = CatchTheBall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhas.CatchTheBall;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Catch The Ball";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
