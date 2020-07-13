@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		4ECA27D224BBC5EB00E78C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27D124BBC5EB00E78C5F /* AppDelegate.swift */; };
 		4ECA27D424BBC5EB00E78C5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27D324BBC5EB00E78C5F /* SceneDelegate.swift */; };
-		4ECA27D624BBC5EB00E78C5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27D524BBC5EB00E78C5F /* ViewController.swift */; };
+		4ECA27D624BBC5EB00E78C5F /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27D524BBC5EB00E78C5F /* StartScreenViewController.swift */; };
 		4ECA27D924BBC5EB00E78C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27D724BBC5EB00E78C5F /* Main.storyboard */; };
 		4ECA27DB24BBC5EC00E78C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27DA24BBC5EC00E78C5F /* Assets.xcassets */; };
 		4ECA27DE24BBC5EC00E78C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27DC24BBC5EC00E78C5F /* LaunchScreen.storyboard */; };
 		4ECA27E924BBC5EC00E78C5F /* CatchTheBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27E824BBC5EC00E78C5F /* CatchTheBallTests.swift */; };
 		4ECA27F424BBC5EC00E78C5F /* CatchTheBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27F324BBC5EC00E78C5F /* CatchTheBallUITests.swift */; };
+		4ECA280224BBCF9700E78C5F /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		4ECA27CE24BBC5EB00E78C5F /* Catch The Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catch The Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECA27D124BBC5EB00E78C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECA27D324BBC5EB00E78C5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4ECA27D524BBC5EB00E78C5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4ECA27D524BBC5EB00E78C5F /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		4ECA27D824BBC5EB00E78C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ECA27DA24BBC5EC00E78C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ECA27DD24BBC5EC00E78C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		4ECA27EF24BBC5EC00E78C5F /* CatchTheBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchTheBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECA27F324BBC5EC00E78C5F /* CatchTheBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTheBallUITests.swift; sourceTree = "<group>"; };
 		4ECA27F524BBC5EC00E78C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				4ECA27D124BBC5EB00E78C5F /* AppDelegate.swift */,
 				4ECA27D324BBC5EB00E78C5F /* SceneDelegate.swift */,
-				4ECA27D524BBC5EB00E78C5F /* ViewController.swift */,
+				4ECA27D524BBC5EB00E78C5F /* StartScreenViewController.swift */,
 				4ECA27D724BBC5EB00E78C5F /* Main.storyboard */,
 				4ECA27DA24BBC5EC00E78C5F /* Assets.xcassets */,
 				4ECA27DC24BBC5EC00E78C5F /* LaunchScreen.storyboard */,
 				4ECA27DF24BBC5EC00E78C5F /* Info.plist */,
+				4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */,
 			);
 			path = CatchTheBall;
 			sourceTree = "<group>";
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECA27D624BBC5EB00E78C5F /* ViewController.swift in Sources */,
+				4ECA280224BBCF9700E78C5F /* GameScreenViewController.swift in Sources */,
+				4ECA27D624BBC5EB00E78C5F /* StartScreenViewController.swift in Sources */,
 				4ECA27D224BBC5EB00E78C5F /* AppDelegate.swift in Sources */,
 				4ECA27D424BBC5EB00E78C5F /* SceneDelegate.swift in Sources */,
 			);
