@@ -26,6 +26,19 @@ class StartScreenViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let previousHeighestScore = UserDefaults.standard.object(forKey: "heighestScore")
+        if previousHeighestScore == nil {
+            heighestScore.text = "Heighest Score: 0"
+        } else {
+            if let scoreToDisplayAsHeighestScore = previousHeighestScore as? Int{
+               heighestScore.text = "Heighest Score: \(String(describing: scoreToDisplayAsHeighestScore))"
+            }
+            
+        }
+    }
 
     @IBAction func startGame(_ sender: UIButton) {
         print("Segue Executed")

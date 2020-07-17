@@ -68,7 +68,7 @@ class GameScreenViewController: UIViewController {
         ballEleven.addGestureRecognizer(recogniserEleven)
         ballTwelve.addGestureRecognizer(recogniserTwelve)
         
-        counter = 10
+        counter = 30
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideBall), userInfo: nil, repeats: true)
@@ -108,8 +108,28 @@ class GameScreenViewController: UIViewController {
                 heighestScore = score
                 UserDefaults.standard.set(heighestScore, forKey: "heighestScore")
             }
+        
+        
+        let alert = UIAlertController(title: "Time's Up", message: "Do you want to play again?", preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            //replay function
+            
+            self.score = 0
+            self.scoreBoard.text = "Score: \(self.score)"
+            self.counter = 30
+            
+            
+            
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+            self.hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.hideBall), userInfo: nil, repeats: true)
         }
         
+        alert.addAction(okButton)
+        alert.addAction(replayButton)
+        self.present(alert, animated: true, completion: nil)
         
-    }
+        
+        }}
 }
