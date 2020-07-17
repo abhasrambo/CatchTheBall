@@ -73,6 +73,7 @@
                         <barButtonItem key="backBarButtonItem" title="Home" id="CPU-dx-Ob5"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="heighestScore" destination="Cvi-47-MY4" id="hnJ-NK-hab"/>
                         <segue destination="aSA-i8-bt5" kind="show" identifier="toGameScreen" id="Hbs-C3-hXc"/>
                     </connections>
                 </viewController>
@@ -92,13 +93,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-8Q-Ps2">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-8Q-Ps2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNV-3h-rLf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="154.66666666666666"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-dM-fiS">
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-dM-fiS">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="154.66666666666666"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="OsZ-ME-mqK">
@@ -112,7 +113,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="OsZ-ME-mqK" firstAttribute="top" secondItem="lXJ-F0-w9L" secondAttribute="top" id="4jG-mi-C8E"/>
+                                                    <constraint firstItem="OsZ-ME-mqK" firstAttribute="topMargin" secondItem="lXJ-F0-w9L" secondAttribute="top" constant="8" id="4jG-mi-C8E"/>
                                                     <constraint firstItem="OsZ-ME-mqK" firstAttribute="top" secondItem="8cd-dM-fiS" secondAttribute="topMargin" id="SFI-Gl-f4i"/>
                                                     <constraint firstItem="lXJ-F0-w9L" firstAttribute="top" secondItem="bzW-Kq-4xj" secondAttribute="top" id="xaj-Dc-VCG"/>
                                                 </constraints>
@@ -220,7 +221,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVz-7k-ffH">
-                                        <rect key="frame" x="47" y="619.33333333333337" width="320" height="154.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="619.33333333333337" width="414" height="154.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y8X-Ie-KtN">
                                                 <rect key="frame" x="152" y="51" width="200" height="30"/>

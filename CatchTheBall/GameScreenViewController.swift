@@ -29,6 +29,9 @@ class GameScreenViewController: UIViewController {
     var timer = Timer()
     var hideTimer = Timer()
     var heighestScore = 0
+    var counter = 0
+    
+    
     
     
     
@@ -64,11 +67,49 @@ class GameScreenViewController: UIViewController {
         ballTen.addGestureRecognizer(recogniserTen)
         ballEleven.addGestureRecognizer(recogniserEleven)
         ballTwelve.addGestureRecognizer(recogniserTwelve)
+        
+        counter = 10
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideBall), userInfo: nil, repeats: true)
+        hideBall()
+        
+        let previousHeighestScore = UserDefaults.standard.object(forKey: "heighestScore")
+        if let bestScore = previousHeighestScore as? Int {
+            heighestScore = bestScore
+        }
     }
 
 
     @objc func increaseScore() {
         score = score + 1
         scoreBoard.text = "Score: \(score)"
+    }
+    
+    @objc func hideBall(){
+        for ball in ballImages {
+            ball.isHidden = true
+        }
+        let random = Int(arc4random_uniform(UInt32(ballImages.count-1)))
+        ballImages[random].isHidden = false
+    }
+    
+    @objc func countDown(){
+        
+        counter = counter - 1
+        if counter == 0 {
+            timer.invalidate()
+            hideTimer.invalidate()
+            
+            for ball in ballImages{
+                ball.isHidden = true
+            }
+            if score > heighestScore {
+                heighestScore = score
+                UserDefaults.standard.set(heighestScore, forKey: "heighestScore")
+            }
+        }
+        
+        
     }
 }
