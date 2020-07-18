@@ -31,6 +31,7 @@ class GameScreenViewController: UIViewController {
     var heighestScore = 0
     var counter = 0
     var checkrandomRepeat = 0
+    var level = 1
     
     
     
@@ -69,10 +70,10 @@ class GameScreenViewController: UIViewController {
         ballEleven.addGestureRecognizer(recogniserEleven)
         ballTwelve.addGestureRecognizer(recogniserTwelve)
         
-        counter = 25
+        counter = 20
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
-        hideTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(hideBall), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(hideBall), userInfo: nil, repeats: true)
         hideBall()
         
         let previousHeighestScore = UserDefaults.standard.object(forKey: "heighestScore")
@@ -102,31 +103,10 @@ class GameScreenViewController: UIViewController {
     }
     
     @objc func countDown(){
-        var level = 1
-        if level == 10{
-            let alert = UIAlertController(title: "Game Complete", message: "Yasss!!! You have completed the game. Want to replay?", preferredStyle: UIAlertController.Style.alert)
-                      let okButton = UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil)
-            let replayButton = UIAlertAction(title: "Let's Play", style: UIAlertAction.Style.default) { (UIAlertAction) in
-                //replay function
-                
-                self.score = 0
-                self.scoreBoard.text = "Score: \(self.score)"
-                self.counter = 20
-                
-                
-                let levelProgressHideInterval = (2.5 - Double((level*2)/10))
-                self.timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
-                self.hideTimer = Timer.scheduledTimer(timeInterval: levelProgressHideInterval, target: self, selector: #selector(self.hideBall), userInfo: nil, repeats: true)
-            }
-            
-            alert.addAction(okButton)
-            alert.addAction(replayButton)
-            self.present(alert, animated: true, completion: nil)
-            
-        } else {
+        
             counter = counter - 1
             if counter == 0 {
-                level = level + 1
+                level += 1
                 timer.invalidate()
                 hideTimer.invalidate()
                 
@@ -137,30 +117,60 @@ class GameScreenViewController: UIViewController {
                     heighestScore = score
                     UserDefaults.standard.set(heighestScore, forKey: "heighestScore")
                 }
-            
-            
-            let alert = UIAlertController(title: "Level Complete", message: "Ready to play next level?", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil)
-            
-            let replayButton = UIAlertAction(title: "Let's Play", style: UIAlertAction.Style.default) { (UIAlertAction) in
-                //replay function
                 
-                //self.score = 0
-                self.scoreBoard.text = "Score: \(self.score)"
-                self.counter = 20
-                
-                
-                let levelProgressHideInterval = (2.5 - Double((level*2)/10))
-                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
-                self.hideTimer = Timer.scheduledTimer(timeInterval: levelProgressHideInterval, target: self, selector: #selector(self.hideBall), userInfo: nil, repeats: true)
-            }
+                if level == 11{
+                          level = 0
+                          let alert = UIAlertController(title: "Game Complete", message: "Yasss!!! You have completed the game. Want to replay?", preferredStyle: UIAlertController.Style.alert)
+                          let okButton = UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil)
+                          let replayButton = UIAlertAction(title: "Let's Play", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                              //replay function
+                              
+                              //self.level = self.level + 1
+                              print("level: \(self.level)")
+                            self.score = 0
+                              self.scoreBoard.text = "Score: \(self.score)"
+                              self.counter = 20
+                              
+                              
+                              let levelProgressHideInterval = (1.0 - ((Double(self.level)-1.0)/10.0))
+                              print(levelProgressHideInterval)
+                              self.timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+                              self.hideTimer = Timer.scheduledTimer(timeInterval: levelProgressHideInterval, target: self, selector: #selector(self.hideBall), userInfo: nil, repeats: true)
+                          }
+                          
+                          alert.addAction(okButton)
+                          alert.addAction(replayButton)
+                          self.present(alert, animated: true, completion: nil)
+                          
+                } else {
+                    let alert = UIAlertController(title: "Level \(level - 1) Complete", message: "Ready to speed up things to next level?", preferredStyle: UIAlertController.Style.alert)
+                              let okButton = UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil)
+                              
+                              let replayButton = UIAlertAction(title: "Let's Play", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                                  //replay function
+                                  
+                                  //self.score = 0
+                                  //self.level = self.level + 1
+                                  print("level: \(self.level)")
+                                  self.scoreBoard.text = "Score: \(self.score)"
+                                  self.counter = 20
+                                  
+                                  
+                                  let levelProgressHideInterval = (1.0 - ((Double(self.level)-1.0)/10.0))
+                                  print(levelProgressHideInterval)
+                                  self.timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+                                  self.hideTimer = Timer.scheduledTimer(timeInterval: levelProgressHideInterval, target: self, selector: #selector(self.hideBall), userInfo: nil, repeats: true)
+                              }
+                              
+                              alert.addAction(okButton)
+                              alert.addAction(replayButton)
+                              self.present(alert, animated: true, completion: nil)
+                }
             
-            alert.addAction(okButton)
-            alert.addAction(replayButton)
-            self.present(alert, animated: true, completion: nil)
+            
+          
             
             
             }}
         }
-        
-}
+
