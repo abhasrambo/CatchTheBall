@@ -118,7 +118,7 @@ class GameScreenViewController: UIViewController {
                     UserDefaults.standard.set(heighestScore, forKey: "heighestScore")
                 }
                 
-                if level == 11{
+                if level == 9{
                           level = 0
                           let alert = UIAlertController(title: "Game Complete", message: "Yasss!!! You have completed the game. Want to replay?", preferredStyle: UIAlertController.Style.alert)
                           let okButton = UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.cancel, handler: nil)
