@@ -11,9 +11,11 @@ import UIKit
 class StartScreenViewController: UIViewController {
 
     @IBOutlet weak var heighestScore: UILabel!
+    @IBOutlet weak var startPlayButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startPlayButton.layer.cornerRadius = 10
         
         let previousHeighestScore = UserDefaults.standard.object(forKey: "heighestScore")
         if previousHeighestScore == nil {
