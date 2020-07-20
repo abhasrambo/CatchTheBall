@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,6 @@
 		4ECA27D924BBC5EB00E78C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27D724BBC5EB00E78C5F /* Main.storyboard */; };
 		4ECA27DB24BBC5EC00E78C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27DA24BBC5EC00E78C5F /* Assets.xcassets */; };
 		4ECA27DE24BBC5EC00E78C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA27DC24BBC5EC00E78C5F /* LaunchScreen.storyboard */; };
-		4ECA27E924BBC5EC00E78C5F /* CatchTheBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27E824BBC5EC00E78C5F /* CatchTheBallTests.swift */; };
-		4ECA27F424BBC5EC00E78C5F /* CatchTheBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA27F324BBC5EC00E78C5F /* CatchTheBallUITests.swift */; };
 		4ECA280224BBCF9700E78C5F /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,11 +43,7 @@
 		4ECA27DD24BBC5EC00E78C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECA27DF24BBC5EC00E78C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECA27E424BBC5EC00E78C5F /* CatchTheBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchTheBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ECA27E824BBC5EC00E78C5F /* CatchTheBallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTheBallTests.swift; sourceTree = "<group>"; };
-		4ECA27EA24BBC5EC00E78C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECA27EF24BBC5EC00E78C5F /* CatchTheBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchTheBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ECA27F324BBC5EC00E78C5F /* CatchTheBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTheBallUITests.swift; sourceTree = "<group>"; };
-		4ECA27F524BBC5EC00E78C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				4ECA27D024BBC5EB00E78C5F /* CatchTheBall */,
-				4ECA27E724BBC5EC00E78C5F /* CatchTheBallTests */,
-				4ECA27F224BBC5EC00E78C5F /* CatchTheBallUITests */,
 				4ECA27CF24BBC5EB00E78C5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,24 +103,6 @@
 				4ECA280124BBCF9700E78C5F /* GameScreenViewController.swift */,
 			);
 			path = CatchTheBall;
-			sourceTree = "<group>";
-		};
-		4ECA27E724BBC5EC00E78C5F /* CatchTheBallTests */ = {
-			isa = PBXGroup;
-			children = (
-				4ECA27E824BBC5EC00E78C5F /* CatchTheBallTests.swift */,
-				4ECA27EA24BBC5EC00E78C5F /* Info.plist */,
-			);
-			path = CatchTheBallTests;
-			sourceTree = "<group>";
-		};
-		4ECA27F224BBC5EC00E78C5F /* CatchTheBallUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4ECA27F324BBC5EC00E78C5F /* CatchTheBallUITests.swift */,
-				4ECA27F524BBC5EC00E78C5F /* Info.plist */,
-			);
-			path = CatchTheBallUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +185,7 @@
 				};
 			};
 			buildConfigurationList = 4ECA27C924BBC5EA00E78C5F /* Build configuration list for PBXProject "CatchTheBall" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -273,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECA27E924BBC5EC00E78C5F /* CatchTheBallTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECA27F424BBC5EC00E78C5F /* CatchTheBallUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8ZKPMAVGG;
 				INFOPLIST_FILE = CatchTheBall/Info.plist;
@@ -446,8 +419,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhas.CatchTheBall;
 				PRODUCT_NAME = "Catch The Ball";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8ZKPMAVGG;
 				INFOPLIST_FILE = CatchTheBall/Info.plist;
@@ -465,8 +441,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhas.CatchTheBall;
 				PRODUCT_NAME = "Catch The Ball";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
